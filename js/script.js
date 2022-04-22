@@ -35,25 +35,36 @@ function reset(){
 
 
 // funzione per generare la griglia di gioco
-function generateGridGame(cellNumbers){
+function generateGridGame(numeroCelle){
 
     const grid = document.createElement('div');
     grid.className = 'gb-grid';
 
-    for( let i = 1; i <= cellNumbers; i++ ){
+    for( let i = 1; i <= numeroCelle; i++ ){
         
-        const cell = generateCell(i, cellNumbers);
+        const cell = generateCell(i, numeroCelle);
         grid.append(cell);
     }
 
+    main.append(grid);
 }
 
 
 // funzione per generare le celle della griglia
-function generateCell(n, cellNumbers){
+function generateCell(number, totCelle){
 
     const cell = document.createElement('div');
-    cell.className = 'cell' + cellNumbers;
-    cell.innerHTML = `<span>${n}</span>`;
+    cell.className = 'cell square' + totCelle;
+    cell.innerHTML = `<span>${number}</span>`;
 
+    cell.addEventListener('click', clickCell);
+
+    return cell;
+}
+
+
+// funzione per aggiungere la classe clicked all'elemento cliccato
+function clickCell(){
+    
+    this.classList.add('clicked');
 }

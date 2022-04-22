@@ -3,6 +3,7 @@
 */
 .gb-container{
   height: 100vh;
+  background-color: rgba(231, 40, 40, 0.8);
 }
 
 
@@ -17,11 +18,19 @@
   text-align: center;
 }
 
+label{
+  font-size: 20px;
+}
+
 .game-title{
   font-weight: bold;
   font-size: 40px;
+  text-shadow: 3px 3px 5px rgba(88, 3, 3, 0.748);
 }
 
+.gb-btn{
+  box-shadow: 0 5px 10px black;
+}
 
 
 /*
@@ -54,6 +63,7 @@ h2{
   align-items: center;
   border: 2px solid white;
   color: white;
+  cursor: pointer;
 } 
 
 .square100{
@@ -70,7 +80,6 @@ h2{
 }
 
 .clicked{
-  color: white;
-  background-color: rgba(26, 137, 248, 0.906);
+  background-color: rgba(46, 135, 243, 0.906);
 }
 
